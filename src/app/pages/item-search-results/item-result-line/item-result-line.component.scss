@@ -1,0 +1,50 @@
+@import "../../../../styles/colors.scss";
+
+:host {
+  display: flex;
+  align-items: center;
+  background-color: white;
+  color: $ml-darkgrey;
+
+  #itemImage {
+    width: 180px;
+    height: 180px;
+    min-width: 180px;
+    min-height: 180px;
+    border-radius: 4px;
+    margin: 16px;
+  }
+  #itemImage:hover {
+    cursor: pointer;
+  }
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    height: 120px;
+
+    .priceContainer {
+      margin-bottom: 32px;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+
+      #price {
+        font-size: 24px;
+        margin-right: 8px;
+      }
+
+      #condition {
+        font-size: 12px;
+      }
+    }
+
+    #title {
+      font-size: 18px;
+    }
+    #title:hover {
+      cursor: pointer;
+    }
+  }
+}

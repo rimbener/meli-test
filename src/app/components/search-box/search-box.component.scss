@@ -1,0 +1,41 @@
+@import "../../../styles/colors.scss";
+
+form {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  grid-gap: 16px;
+  padding: 8px 0;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+
+  #Logo_ML {
+    grid-column: col-start 2;
+  }
+
+  #searchDiv {
+    display: flex;
+    grid-column: col-start 3 / span 9;
+
+    input:focus {
+      outline: none !important;
+    }
+
+    input[type="text"] {
+      flex-grow: 1;
+      font-size: 18px;
+      padding-left: 1rem;
+      border: none;
+    }
+    input[type="text"]::placeholder {
+      color: $ml-mediumgrey;
+    }
+
+    input[type="image"] {
+      width: 39px;
+      height: 39px;
+      object-fit: scale-down;
+      background-color: $ml-lightgrey;
+    }
+  }
+}

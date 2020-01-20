@@ -1,0 +1,9 @@
+<form>
+    <div id="Logo_ML">
+        <img src="assets/images/Logo_ML.png" alt="Logo Mercado Libre">
+    </div>
+    <div id="searchDiv">
+        <input #searchInput type="text" [value]="searchTerm$ | async" placeholder="Nunca dejes de buscar" inputAutoFocus>
+        <input type="image" src="assets/images/ic_Search.png" alt="Botón Buscar" (click)="onSubmit(searchInput.value)">
+    </div>
+</form>

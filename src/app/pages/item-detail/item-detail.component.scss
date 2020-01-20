@@ -1,0 +1,89 @@
+@import "../../../styles/colors.scss";
+
+article {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 64px;
+
+  #category {
+    grid-column: col-start 2 / span 10;
+    font-size: 14px;
+    color: $ml-mediumgrey;
+    margin: 16px 0;
+  }
+
+  .container {
+    grid-column: 2 col-start / span 10;
+    display: grid;
+    grid-template-columns: repeat(12, [col-start] 1fr);
+    grid-template-rows: repeat(7, [row-start] 1fr);
+    grid-column-gap: 16px;
+    color: $ml-darkgrey;
+    background-color: white;
+
+    img {
+      max-width: 680px;
+      grid-column: col-start 2 / span 6;
+      grid-row: row-start 1 / span 6;
+      margin-top: 32px;
+    }
+
+    #detailContainer {
+      grid-column: col-start 8 / span 4;
+      grid-row: row-start 1 / span 6;
+
+      #condition {
+        font-size: 14px;
+        margin: 32px 0 16px 0;
+      }
+
+      #title {
+        font-size: 24px;
+        color: $ml-darkgrey;
+      }
+
+      #priceContainer {
+        display: flex;
+        align-items: flex-start;
+        margin: 32px 0;
+        h2 {
+          display: inline;
+          font-size: 46px;
+          margin-right: 8px;
+        }
+        img {
+          margin: 0;
+        }
+      }
+      button {
+        background-color: $ml-blue;
+        color: white;
+        height: 48px;
+        margin-right: 32px;
+        border-radius: 4px;
+        width: 100%;
+      }
+    }
+  }
+
+  #descriptionContainer {
+    grid-column: 2 col-start / span 10;
+    display: grid;
+    padding: 0 32px;
+    color: $ml-darkgrey;
+    background-color: white;
+
+    h3 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 14px;
+      color: $ml-mediumgrey;
+      margin: 32px 0;
+    }
+  }
+}

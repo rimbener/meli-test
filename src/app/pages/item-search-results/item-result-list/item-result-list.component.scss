@@ -1,0 +1,28 @@
+@import "../../../../styles/colors.scss";
+
+:host {
+  display: grid;
+  grid-template-columns: repeat(12, [col-start] 1fr);
+  grid-gap: 16px;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 64px;
+
+  p {
+    font-size: 14px;
+    color: $ml-mediumgrey;
+    margin: 16px 0;
+  }
+
+  article {
+    grid-column: col-start 2 / span 10;
+
+    hr {
+      height: 1px;
+      border: none;
+      background-color: $ml-lightgrey;
+      margin: -1px 16px 0 16px;
+    }
+  }
+}

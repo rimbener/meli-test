@@ -1,0 +1,11 @@
+<img id="itemImage" [src]="item.picture" alt="Producto" (click)="itemClick(item.id)">
+<div class="container">
+    <div class="priceContainer">
+        <div>
+            <span id="price">{{item.price.currency}} {{item.price.amount | number}}</span>
+            <img *ngIf="item.free_shipping" src="assets/images/ic_shipping.png" alt="">
+        </div>
+        <span id="condition">{{item.condition === 'new' ? 'Nuevo' : 'Usado'}}</span>
+    </div>
+    <p id="title" (click)="itemClick(item.id)">{{item.title}}</p>
+</div>

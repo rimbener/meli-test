@@ -1,0 +1,6 @@
+<ng-template #loading>
+    <app-spinner></app-spinner>
+</ng-template>
+
+<app-item-result-list *ngIf="(items$ | async).items as items; else loading" [items]="items">
+</app-item-result-list>

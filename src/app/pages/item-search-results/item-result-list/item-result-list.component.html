@@ -1,0 +1,7 @@
+<article>
+    <p>Aquí va la categoría del artículo pero cuando es una búsqueda puede haber muchas diferentes</p>
+    <article *ngFor="let item of items; let i = index">
+        <app-item-result-line [item]="item"></app-item-result-line>
+        <hr *ngIf="i !== items.length - 1">
+    </article>
+</article>
